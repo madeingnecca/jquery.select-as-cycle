@@ -70,6 +70,7 @@
       if (opts.wheel && 'mousewheel' in $.fn) {
         $content
         .mousewheel(function(event, delta) {
+          event.preventDefault();
           if (delta > 0 && next.pos == 'before') {
             $next.click();
           }
